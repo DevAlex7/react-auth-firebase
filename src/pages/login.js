@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import LogoGoogle from '../assets/logo-google.png'
 import LogoGitHub from '../assets/logo-github.png'
+import LogoFacebook from '../assets/logo-facebook.jpg'
 import {
     signIn, 
-    signInWithGoogle, signInWithGitHub
+    signInWithGoogle, signInWithGitHub, signInWithFacebook
 } from '../helpers/auth'
 import ButtonLogin from '../components/buttonSession'
 import SocialMediaButton from '../components/socialMediaButton'
@@ -35,6 +36,17 @@ const LoginScreen = () => {
         try {
             await signInWithGitHub()
             window.location.href= '/'
+        } catch (error) {
+            setState({
+                error : error.message
+            })
+        }
+    }
+
+    const facebookSignIn = async () => {
+        try {
+            await signInWithFacebook()
+            window.location.href='/'
         } catch (error) {
             setState({
                 error : error.message
@@ -96,9 +108,10 @@ const LoginScreen = () => {
                             <div className="my-3">
                                 <span className="text-xs text-gray-600 mt">You can also login with google and others social medias...</span>
                             </div>
-                            <div className="w-full md:w-1/3">
-                                <SocialMediaButton image={LogoGoogle} event={ googleSignIn }/>
-                                <SocialMediaButton image={LogoGitHub} event={ gitHubSignIn } className="ml-3"/>
+                            <div className="w-full md:w-full">
+                                <SocialMediaButton image={LogoGoogle}   event={ googleSignIn }/>
+                                <SocialMediaButton image={LogoGitHub}   event={ gitHubSignIn } className="ml-3"/>
+                                <SocialMediaButton image={LogoFacebook} event={ facebookSignIn } className="ml-3"/>
                             </div>
                         </div>
                         {

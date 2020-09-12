@@ -18,3 +18,8 @@ export function signInWithGitHub() {
 export function signIn (email, password) {
     return auth.signInWithEmailAndPassword(email, password)
 }
+
+export function signInWithFacebook() {
+    var provider = new firebase.auth.FacebookAuthProvider()
+    return auth.signInWithPopup(provider)
+}
