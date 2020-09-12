@@ -1,0 +1,15 @@
+html{
+    font-family: 'Sora', sans-serif;
+}
+.user{
+    font-weight: 900;
+}
+.message{
+    padding: 5px;
+    background-color: royalblue;
+    width: max-content;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    font-weight: 100;
+}
