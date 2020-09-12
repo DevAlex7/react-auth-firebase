@@ -30,7 +30,7 @@ const HomeScreen = ({provider ,user}) => {
         return user.providerId
     }
  
-    return <h1 className="h-screen w-full">
+    return <div className="h-screen w-full">
         
         <div className="flex flex-col justify-center items-center mt-32">
             <div>
@@ -43,7 +43,7 @@ const HomeScreen = ({provider ,user}) => {
             </div>
             <button className="mt-5 bg-indigo-500 text-white px-5 py-2 rounded" onClick={()=>signOut()}>sign out</button>
         </div>
-    </h1>
+    </div>
 }
 
 export default HomeScreen
