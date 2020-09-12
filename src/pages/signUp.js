@@ -57,11 +57,6 @@ const SignUpScreen = () => {
         })
     }
 
-    const signUpToString = () => {
-        console.log(`${form.email}, ${form.password}`)
-    }
-
-
     return <>
         <div className="h-screen bg-indigo-700">
             <div className="container mx-auto h-full flex justify-center items-center">

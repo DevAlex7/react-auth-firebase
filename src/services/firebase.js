@@ -1,10 +1,17 @@
-import firebase from 'firebase'
-import config from '../config'
+import firebase from 'firebase';
 var firebaseConfig = {
     //your firebase console web app 
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 // Initialize Firebase
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 
 export const auth = firebase.auth()

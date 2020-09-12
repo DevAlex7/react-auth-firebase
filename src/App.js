@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Route,
   BrowserRouter as Router,
   Switch,
 } from 'react-router-dom'
@@ -24,9 +23,7 @@ const App = () => {
         
         if(user){
           var company = ''
-          user.providerData.map((prov) => {
-            company = prov.providerId
-          })
+          company = user.providerData.map((prov) => prov.providerId)
           setUserAuth(user)
           setAuthenticated(true)
           setProvider(company)

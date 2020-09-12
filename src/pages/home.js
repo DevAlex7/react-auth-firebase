@@ -34,7 +34,7 @@ const HomeScreen = ({provider ,user}) => {
     <div className="h-screen w-full">
         <div className="flex flex-col justify-center items-center mt-32">
             <div>
-                <img className="rounded shadow-sm h-48" src={ user.photoURL ? user.photoURL : noProfile }/>
+                <img className="rounded shadow-sm h-48" src={ user.photoURL ? user.photoURL : noProfile } alt={user.photoURL ? user.photoURL : noProfile}/>
             </div>
             <div className="py-2">
             <p> you are signed as: {isLoggedWithSocialMediaOrFirebase(user)}</p>
