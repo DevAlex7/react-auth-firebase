@@ -30,8 +30,8 @@ const HomeScreen = ({provider ,user}) => {
         return user.providerId
     }
  
-    return <div className="h-screen w-full">
-        
+    return <> 
+    <div className="h-screen w-full">
         <div className="flex flex-col justify-center items-center mt-32">
             <div>
                 <img className="rounded shadow-sm h-48" src={ user.photoURL ? user.photoURL : noProfile }/>
@@ -44,6 +44,7 @@ const HomeScreen = ({provider ,user}) => {
             <button className="mt-5 bg-indigo-500 text-white px-5 py-2 rounded" onClick={()=>signOut()}>sign out</button>
         </div>
     </div>
+    </>
 }
 
 export default HomeScreen
